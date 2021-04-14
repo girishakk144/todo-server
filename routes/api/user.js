@@ -8,7 +8,7 @@ router.get('/', async(req, res) =>{
 		return res.status(200).json(usersList)
 	} catch (error) {
 		console.log(error.message)
-		res.status(500).send("server error")
+		res.status(500).send("server error.")
 	}
 })
 
@@ -20,7 +20,7 @@ router.post('/', async(req, res) =>{
 		return res.status(200).json(userDetails)
 	} catch (error) {
 		console.log(error.message)
-		res.status(500).send("server error")
+		res.status(500).send("server error.")
 	}
 })
 

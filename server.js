@@ -14,7 +14,7 @@ connectDB();
 const data =[{name: "girisha", age: 25},{name:"manju", age: 26}]
 
 app.get('/', (req, res) =>{
-	res.send('Api running......++ ')
+	res.send('Api running......')
 })
 
 app.get("/users", (req, res)=>{

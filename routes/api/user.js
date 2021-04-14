@@ -34,4 +34,16 @@ router.delete('/:id', async(req, res) =>{
 	}
 })
 
+router.put('/:id', async(req, res) =>{
+	try {
+		const {name, age} = req.body;
+		const obj ={name, age}
+		const userUpdated = await User.findOneAndUpdate({_id: req.params.id},{$set:obj},{new: true});
+		return res.status(200).json(userUpdated)
+	} catch (error) {
+		console.log(error.message)
+		return res.status(500).send("server error.")
+	}
+})
+
 module.exports = router;
